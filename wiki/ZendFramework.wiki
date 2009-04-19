@@ -1,0 +1,15 @@
+#summary ZendFramework integration information
+
+= Overview =
+
+PINF wraps Zend_Tool and makes PINF functionality available to ZF. You can run Zend_Tool (zf) commands through PINF with:
+
+{{{
+pinf zf *
+}}}
+
+= Roadmap =
+
+  * Call Zend_Tool via PINF command line script *(DONE)*
+  * Make PINF variables available to Zend_Tool providers
+  * Call PINF for Zend_Tool providers
