@@ -2,15 +2,16 @@
 
 = Goals =
 
-  * PINF will run seamlessly with no configuration on any and all platforms that PEAR runs on
+  * PINF will run seamlessly with no configuration on any and all operating systems that PEAR runs on
   * PINF will tie seamlessly into all popular PHP server stacks with no configuration
 
 = Details =
 
-== Platforms ==
+== Operating Systems ==
 
   * Max OS X *(Actively maintained)*
-  * Linux
+  * CentOS
+  * Ubuntu
   * Windows (some functionality may not be available)
 
 == PHP Server Stacks ==
