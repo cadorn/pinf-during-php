@@ -1,13 +1,24 @@
 #summary Target platform information
 
-= Introduction =
+= Goals =
 
-Add your content here.
-
+  * PINF will run seamlessly with no configuration on any and all platforms that PEAR runs on
+  * PINF will tie seamlessly into all popular PHP server stacks with no configuration
 
 = Details =
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+== Platforms ==
+
+  * Max OS X *(Actively maintained)*
+  * Linux
+  * Windows (some functionality may not be available)
+
+== PHP Server Stacks ==
+
+Some functionality may not be available on every server stack.
+
+  * [http://www.zend.com/en/products/server/ ZendServer]
+  * [http://www.apachefriends.org/en/xampp.html XAMPP]
+  * [http://www.easyphp.org/ EasyPHP]
+  * [http://www.rpath.org/project/lamp/ rBuilder LAMP Appliance]
+  * [http://httpd.apache.org/ Apache HTTP Server]
