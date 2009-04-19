@@ -1,0 +1,21 @@
+#summary All available PINF commands
+
+= Introduction =
+
+The _pinf_ command line tool provides a single point of access to your entire PHP toolchain.
+
+= Third party wrappers =
+
+{{{
+pinf pear *
+pinf phing *
+pinf zf *
+}}}
+
+See: [PEAR], [Phing], [ZendFramework]
+
+= PINF commands =
+
+{{{
+pinf show version
+}}}
