@@ -17,7 +17,10 @@
 
 Some functionality may not be available on every server stack.
 
-  * [http://www.zend.com/en/products/server/ ZendServer]
+  * [http://www.zend.com/en/products/server/ ZendServer] *(Initial development focus)*
+    * Contributors
+      * Christoph Dorn
+      * Jess Portnoy
   * [http://www.apachefriends.org/en/xampp.html XAMPP]
   * [http://www.easyphp.org/ EasyPHP]
   * [http://www.rpath.org/project/lamp/ rBuilder LAMP Appliance]
