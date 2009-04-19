@@ -1,0 +1,33 @@
+#summary How to setup a development environment for PINF
+
+= Requirements =
+
+  * UNIX
+  * SVN Client
+  * PHP 5.2+
+  * PEAR
+  * Phing
+    {{{
+       pear channel-discover pear.phing.info
+       pear install phing/phing
+    }}}
+
+= Checkout =
+
+URL: http://pinf.googlecode.com/svn/branches/pm-prototype/
+
+See http://code.google.com/p/pinf/source/checkout for specifics.
+
+
+= Setup =
+
+{{{
+phing dev-setup
+}}}
+
+
+= Test =
+
+{{{
+pinf show version
+}}}
