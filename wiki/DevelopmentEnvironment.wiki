@@ -14,7 +14,7 @@
 
 = Checkout =
 
-URL: http://pinf.googlecode.com/svn/branches/core-0.1/
+PINF Core: http://pinf.googlecode.com/svn/branches/core-0.1/
 
 See http://code.google.com/p/pinf/source/checkout for specifics.
 
