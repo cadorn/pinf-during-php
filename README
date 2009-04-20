@@ -1,10 +1,8 @@
-                         ___________________
-                         P     I     N     F
 
-  PINF Project/Package/Plugin Manager
-  -----------------------------------
-
-	A universal project, package and plugin management system for PHP.
+  PINF Core
+  ---------
+  
+	A universal command-line project, package and plugin management system.
 
 
 	Direcotry Structure

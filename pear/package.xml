@@ -2,9 +2,9 @@
 
 <package packagerversion="1.7.1" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0                http://pear.php.net/dtd/tasks-1.0.xsd                http://pear.php.net/dtd/package-2.0                http://pear.php.net/dtd/package-2.0.xsd">
   
- <name>PackageManager</name>
+ <name>Core</name>
  <channel>pear.php.net</channel>
- <summary>PINF PackageManager</summary>
+ <summary>A universal command-line project, package and plugin management system.</summary>
  <description>For more information about the PINF PackageManager please see: http://code.google.com/p/pinf/</description>
  <lead>
   <name>Christoph Dorn</name>
