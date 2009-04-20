@@ -12,6 +12,7 @@
   * Max OS X *(Actively maintained)*
   * CentOS
   * Ubuntu
+  * Debian GNU/Linux
   * Windows (some functionality may not be available)
 
 == PHP Server Stacks ==
