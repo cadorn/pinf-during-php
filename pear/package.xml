@@ -4,7 +4,7 @@
   
  <name>Core</name>
  <channel>pear.php.net</channel>
- <summary>A universal command-line project, package and plugin management system.</summary>
+ <summary>An intelligent command-line project, package and plugin management system.</summary>
  <description>For more information about the PINF PackageManager please see: http://code.google.com/p/pinf/</description>
  <lead>
   <name>Christoph Dorn</name>
