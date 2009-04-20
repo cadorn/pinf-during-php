@@ -1,0 +1,25 @@
+#!/bin/sh
+
+# ------------------------------------------------------------------------
+# The pinf command line script for Unix based systems
+# $Id$
+# ------------------------------------------------------------------------
+
+# Change this to reflect your environment if the default value doesn't work
+PHP_COMMAND="@PHP-BIN@"
+export PHP_COMMAND
+
+PHING_HOME="@DATA-DIR@/phing"
+export PHING_HOME
+
+# -------------------------------------------------------------------------
+# Do not change anything below this line unless you know what you're doing.
+# -------------------------------------------------------------------------
+
+if (test -z "$PHP_COMMAND") ; then
+	echo "WARNING: PHP_COMMAND environment not set. (Assuming php on PATH)"
+	PHP_COMMAND=php
+	export PHP_COMMAND
+fi
+
+$PHP_COMMAND -d output_buffering=0 -d html_errors=off -d variables_order=EGPCS -d open_basedir="" -d safe_mode=0 -qC @PEAR-DIR@/pinf.php "$@"

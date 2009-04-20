@@ -1,0 +1,32 @@
+                         ___________________
+                         P     I     N     F
+
+  Current Development
+  -------------------
+    
+  Christoph Dorn <christoph@christophdorn.com>
+
+  If you've done work on PINF and you are not listed here, please feel free
+  to add yourself.
+
+
+  Other libraries/projects
+  ------------------------
+
+  PINF seamlessly integrates a number of third party projects. Many
+  ideas/concepts/code are taken from these projects. Full credit
+  is given to the developers of these projects for their excellent work.
+
+  Phing
+    License: LGPL
+    Phing is a PHP based build tool.
+    (c) 2006 The Phing Project. All rights reserved.
+    http://phing.info/
+
+  PEAR
+    License: PHP License, version 3.0
+    A framework and distribution system for reusable PHP components.
+    (c) 1999 The PHP Group. All rights reserved.
+    http://pear.php.net/
+
+  --$Id$

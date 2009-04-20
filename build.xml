@@ -1,0 +1,151 @@
+<?xml version="1.0"?>
+
+<project name="org.pinf.package.PackageManager" default="none" basedir=".">
+
+  <property file="build.properties" />
+  
+  <property name="mode" value="production"/>
+  
+
+  <target name="none">
+    <echo msg="There is no default target set!" />
+  </target>
+
+
+  <target name="build-setup">
+    
+    <echo msg="Installing PEAR:VersionControl_SVN package" />
+    <exec command="pear install -f VersionControl_SVN" passthru="true"/>
+
+    <echo msg="Making directory ./build" />
+    <mkdir dir="./build" />
+
+  </target>
+
+  
+  <target name="prepare">
+    
+    <delete dir="./build/pear/pinf" includeemptydirs="true" verbose="false" failonerror="true" />
+  
+  </target>
+
+
+  <target name="build" depends="prepare">
+
+    <php expression="date('Y-m-d')" returnProperty="date"/>
+
+    <copy file="./pear/package.xml" tofile="./build/pear/pinf/package.xml">
+      <filterchain>
+        <replacetokens begintoken="##" endtoken="##">
+          <token key="DATE" value="${date}" />
+          <token key="VERSION" value="${version}" />
+          <token key="RELEASE" value="${release}" />
+          <token key="build.pear.phing.version" value="${build.pear.phing.version}" />
+          <token key="build.pear.zf.version" value="${build.pear.zf.version}" />
+        </replacetokens>
+      </filterchain>
+    </copy>
+
+    <copy file="./bin/pinf-pear" tofile="./build/pear/pinf/pinf"/>
+    <copy file="./bin/pinf.php" tofile="./build/pear/pinf/pinf.php">
+      <filterchain>
+        <replacetokens begintoken="##" endtoken="##">
+          <token key="MODE" value="${mode}" />
+          <token key="DEV-PACKAGE-DIR" value="${project.basedir}" />
+        </replacetokens>
+      </filterchain>
+    </copy>
+    
+    <copy file="./library/PINF/PackageManager/Version.php" tofile="./build/pear/pinf/org.pinf.package.PackageManager/PINF/PackageManager/Version.php">
+      <filterchain>
+        <replacetokens begintoken="##" endtoken="##">
+          <token key="VERSION" value="${version}" />
+          <token key="RELEASE" value="${release}" />
+        </replacetokens>
+      </filterchain>
+    </copy>
+    
+    <if>
+      <equals arg1="${mode}" arg2="production" />
+      <then>
+
+        <copy todir="./build/pear/pinf/org.pinf.package.PackageManager" >
+          <fileset dir="./library"/>
+        </copy>
+        <copy todir="./build/pear/pinf/org.pinf.package.PackageManager" >
+          <fileset dir="./override"/>
+        </copy>
+
+			</then>
+    </if>    
+
+  </target>
+
+  <target name="dev-env-setup">
+    <property name="mode" value="development" override="true"/>
+  </target>
+
+  <target name="dev-setup" depends="dev-env-setup, build">
+        
+    <!--
+    TODO: - Enable PINF to attach to targets
+    <pinf task="target">
+          - Schedule this target to run every "timer"
+            Timer format: m-d_H-i-s (see date())
+              * Use 'A' to denote: all increments
+              * Use '\dR'(preg) to denote: repeat for all '\d' increments
+      <schedule timer="A-1R_01-01-01"/>
+    </pinf>
+    -->
+    <property name="build.exists" value="false"/>
+		<available file="./build" property="build.exists" value="true"/>
+    <if>
+      <equals arg1="${build.exists}" arg2="" />
+      <then>
+		    <fail msg="You must run 'phing build-setup' first!" />
+			</then>
+			<else>
+
+        <property name="build.pear.phing.exists" value="false"/>
+    		<available file="./build/pear/phing" property="build.pear.phing.exists" value="true"/>
+        <if>
+          <equals arg1="${build.pear.phing.exists}" arg2="1" />
+          <then>
+            <!--
+            <echo msg="Updating Phing SVN:${build.pear.phing.svn.repository.url} checkout in ./build/pear/phing" />
+            <svnupdate svnpath="/usr/bin/svn"
+                       nocache="true"
+                       todir="./build/pear/phing"/>
+            -->
+    			</then>
+    			<else>
+            <echo msg="Checking out Phing from SVN:${build.pear.phing.svn.repository.url} to ./build/pear/phing" />
+            <svncheckout svnpath="/usr/bin/svn"
+                         nocache="true"
+                         repositoryurl="${build.pear.phing.svn.repository.url}"
+                         todir="./build/pear/phing"/>
+      	  </else>
+        </if>
+
+        <property name="build.pear.zf.exists" value="false"/>
+    		<available file="./build/pear/Zend" property="build.pear.zf.exists" value="true"/>
+        <if>
+          <equals arg1="${build.pear.zf.exists}" arg2="" />
+          <then>
+            <echo msg="Checking out ZendFramework from SVN:${build.pear.zf.svn.repository.url} to ./build/pear/Zend" />
+            <svncheckout svnpath="/usr/bin/svn"
+                         nocache="true"
+                         repositoryurl="${build.pear.zf.svn.repository.url}"
+                         todir="./build/pear/Zend"/>
+    			</then>
+        </if>
+
+        <echo msg="Installing PEAR package locally for development" />
+        
+        <exec command="pear install -fn package.xml" passthru="true" dir="./build/pear/pinf"/>
+        
+			</else>
+    </if>
+  </target>
+
+</project>

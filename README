@@ -1,0 +1,33 @@
+                         ___________________
+                         P     I     N     F
+
+  PINF Project/Package/Plugin Manager
+  -----------------------------------
+
+	A universal project, package and plugin management system for PHP.
+
+
+	Direcotry Structure
+	-------------------
+
+	/bin			Scripts that will be installed via PINF when your package is installed
+	/build    Temporary built files used for your local environment or packaging
+	/library  Library and application files for PINF
+	/override Codefiles that override specific files from your include path
+	/pear     Utility files for PEAR packager
+	build.*   Build utility files for Phing
+
+
+	Milestone 1
+	-----------
+
+	pinf create	project		Creates default package project layout
+	  - Specify a project profile with -p
+	pinf create package   Create a package for distribution
+	  - Specify a package profile with -p
+	pinf deploy package   Deploy a package to a PINF package server
+	  - Specify a server with -s
+	pinf install package  Installs a distributed package in read-only mode
+	pinf install project  Installs a project in full collaboration mode
+  pinf commit project   Commit project changes to a source control system
+  pinf update project   Update a project from a source control system
