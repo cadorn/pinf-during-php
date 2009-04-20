@@ -1,7 +1,5 @@
 #summary How to get involved with PINF
 
-= Introduction =
-
 PINF needs you. If you are good with PHP and want to improve your daily development life please consider helping out.
 
 = How to get involved =
