@@ -22,6 +22,7 @@ See http://code.google.com/p/pinf/source/checkout for specifics.
 = Setup =
 
 {{{
+phing build-setup
 phing dev-setup
 }}}
 
