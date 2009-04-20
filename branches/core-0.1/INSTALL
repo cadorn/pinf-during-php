@@ -18,6 +18,7 @@ version 1.8.0 is released on pear.zfcampus.org we can work on deployment packagi
 	Setup
 	-----
 	
+  phing build-setup
 	phing dev-setup
 	
 	

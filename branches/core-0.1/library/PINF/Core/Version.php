@@ -1,7 +1,7 @@
 <?php
 
 
-final class PINF_PackageManager_Version
+final class PINF_Core_Version
 {
     const VERSION = '##VERSION####RELEASE##';
 }

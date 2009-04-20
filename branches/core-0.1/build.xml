@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<project name="org.pinf.package.PackageManager" default="none" basedir=".">
+<project name="alpha-org.pinf.package.Core" default="none" basedir=".">
 
   <property file="build.properties" />
   
@@ -55,16 +55,7 @@
         </replacetokens>
       </filterchain>
     </copy>
-    
-    <copy file="./library/PINF/PackageManager/Version.php" tofile="./build/pear/pinf/org.pinf.package.PackageManager/PINF/PackageManager/Version.php">
-      <filterchain>
-        <replacetokens begintoken="##" endtoken="##">
-          <token key="VERSION" value="${version}" />
-          <token key="RELEASE" value="${release}" />
-        </replacetokens>
-      </filterchain>
-    </copy>
-    
+        
     <if>
       <equals arg1="${mode}" arg2="production" />
       <then>
@@ -78,6 +69,15 @@
 
 			</then>
     </if>    
+
+    <copy file="./library/PINF/Core/Version.php" tofile="./build/pear/pinf/org.pinf.package.Core/PINF/Core/Version.php">
+      <filterchain>
+        <replacetokens begintoken="##" endtoken="##">
+          <token key="VERSION" value="${version}" />
+          <token key="RELEASE" value="${release}" />
+        </replacetokens>
+      </filterchain>
+    </copy>
 
   </target>
 

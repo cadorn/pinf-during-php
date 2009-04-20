@@ -7,7 +7,7 @@ if('##MODE##'=='development') {
                     'build' . DIRECTORY_SEPARATOR . 
                     'pear' . DIRECTORY_SEPARATOR . 
                     'pinf' . DIRECTORY_SEPARATOR . 
-                    'org.pinf.package.PackageManager';
+                    'org.pinf.package.Core';
   $includePaths[] = '##DEV-PACKAGE-DIR##' . DIRECTORY_SEPARATOR . 
                     'override';
   $includePaths[] = '##DEV-PACKAGE-DIR##' . DIRECTORY_SEPARATOR . 
@@ -19,7 +19,7 @@ if('##MODE##'=='development') {
 } else {
   $includePaths[] = '@PEAR-DIR@' . DIRECTORY_SEPARATOR . 
                     'pinf' . DIRECTORY_SEPARATOR . 
-                    'org.pinf.package.PackageManager';
+                    'org.pinf.package.Core';
   $includePaths[] = '@PEAR-DIR@';
 }
 
