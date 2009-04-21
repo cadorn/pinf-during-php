@@ -10,9 +10,9 @@
 == Operating Systems ==
 
   * Max OS X *(Actively maintained)*
+  * Debian GNU/Linux *(Actively maintained)*
   * CentOS
   * Ubuntu
-  * Debian GNU/Linux
   * Windows (some functionality may not be available)
 
 == PHP Server Stacks ==
