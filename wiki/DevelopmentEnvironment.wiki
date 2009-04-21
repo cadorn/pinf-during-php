@@ -21,13 +21,19 @@ See http://code.google.com/p/pinf/source/checkout for specifics.
 
 = Setup =
 
+<font color="red">*NOTE:* If the setup does not run successfully, please post any error messages/patches and feedback below.</font>
+
 {{{
 phing build-setup
 phing dev-setup
 }}}
 
+  * _build-setup_ will checkout a copy of Phing and ZendFramework into _./build/pear_
+  * _dev-setup_ will build and publish development bootstrap files for PINF into _./build/pear/phing_ and install _./build/pear/pinf/package.xml_ using your default PEAR installer.
 
 = Test =
+
+If the following command works the core of PINF is installed successfully (in development mode).
 
 {{{
 pinf show version
