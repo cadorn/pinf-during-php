@@ -11,14 +11,16 @@ version 1.8.0 is released on pear.zfcampus.org we can work on deployment packagi
 	- UNIX
 	- PHP 5.2+
 	- PEAR
-  - Phing:
-  		pear channel-discover pear.phing.info
+  		- Phing:
+  			pear channel-discover pear.phing.info
 			pear install phing/phing
+		- VersionControl_SVN:
+			pear install channel://pear.php.net/VersionControl_SVN-0.3.1
 	
 	Setup
 	-----
 	
-  phing build-setup
+  	phing build-setup
 	phing dev-setup
 	
 	
