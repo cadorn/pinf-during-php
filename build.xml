@@ -14,9 +14,6 @@
 
   <target name="build-setup">
     
-    <echo msg="Installing PEAR:VersionControl_SVN package" />
-    <exec command="pear install -f VersionControl_SVN" passthru="true"/>
-
     <echo msg="Making directory ./build" />
     <mkdir dir="./build" />
 
@@ -139,6 +136,20 @@
                          todir="./build/pear/Zend"/>
     			</then>
         </if>
+
+        <property name="build.pear.phpunit.exists" value="false"/>
+    		<available file="./build/pear/PHPUnit" property="build.pear.phpunit.exists" value="true"/>
+        <if>
+          <equals arg1="${build.pear.phpunit.exists}" arg2="" />
+          <then>
+            <echo msg="Checking out PHPUnit from SVN:${build.pear.phpunit.svn.repository.url} to ./build/pear/PHPUnit" />
+            <svncheckout svnpath="/usr/bin/svn"
+                         nocache="true"
+                         repositoryurl="${build.pear.phpunit.svn.repository.url}"
+                         todir="./build/pear/PHPUnit"/>
+    			</then>
+        </if>
+
 
         <echo msg="Installing PEAR package locally for development" />
         
