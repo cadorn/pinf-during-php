@@ -2,8 +2,9 @@
   PINF Core
   ---------
   
-	An intelligent command-line project, application, package and plugin management system.
-
+	An intelligent command-line tool for project, application, package and plugin
+	development, debugging, testing, distribution, deployment and general management. 
+	
 
 	Direcotry Structure
 	-------------------
@@ -16,17 +17,3 @@
 	/pear     Utility files for PEAR packager
 	build.*   Build utility files for Phing
 
-
-	Milestone 1
-	-----------
-
-	pinf create	project		Creates default package project layout
-	  - Specify a project profile with -p
-	pinf create package   Create a package for distribution
-	  - Specify a package profile with -p
-	pinf deploy package   Deploy a package to a PINF package server
-	  - Specify a server with -s
-	pinf install package  Installs a distributed package in read-only mode
-	pinf install project  Installs a project in full collaboration mode
-  pinf commit project   Commit project changes to a source control system
-  pinf update project   Update a project from a source control system
