@@ -6,15 +6,6 @@
   * SVN Client
   * PHP 5.2+
   * PEAR
-  ** Phing
-     {{{
-        pear channel-discover pear.phing.info
-        pear install phing/phing
-     }}}
-  ** VersionControl_SVN
-     {{{
-        pear install channel://pear.php.net/VersionControl_SVN-0.3.1
-     }}}
 
 = Checkout =
 
@@ -28,10 +19,16 @@ See http://code.google.com/p/pinf/source/checkout for specifics.
 <font color="red">*NOTE:* If the setup does not run successfully, please post any error messages/patches and feedback below.</font>
 
 {{{
-phing dev-setup
+bootstrap.sh
 }}}
 
-_dev-setup_ will checkout a copy of [Phing], [ZendFramework] and [PHPUnit] into _./build/pear_ and build and publish development bootstrap files for PINF into _./build/pear/pinf_ and install _./build/pear/pinf/package.xml_ using your default PEAR installer.
+The bootstrap script will:
+
+  * Install [Phing]
+  * Install PEAR:VersionControl_SVN
+  * Checkout source copies of [Phing], [ZendFramework] and [PHPUnit] into _./build/pear_
+  * Build and publish development bootstrap files for PINF into _./build/pear/pinf_
+  * Install _./build/pear/pinf/package.xml_ using your default PEAR installer
 
 = Test =
 
