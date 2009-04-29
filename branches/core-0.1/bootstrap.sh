@@ -1,4 +1,8 @@
 #!/bin/sh
+
+# Temporary bootstrapping script until PEAR packaging work is done so PINF can 
+# be installed via PEAR.
+
 PEAR_GUESS=`which pear`
 if [ -n "$PEAR_GUESS" ]; then
 	PRINT_DEFAULT_PEAR="[$PEAR_GUESS]"
