@@ -4,4 +4,6 @@ PINF needs you. If you are good with PHP and want to improve your daily developm
 
 = How to get involved =
 
-A mailing list will be setup soon. For now you can join #pinf at irc.freenode.net
+Join the [http://groups.google.com/group/pinf-dev mailing list].
+
+Join the [http://www.freenode.net/ #pinf at irc.freenode.net].
