@@ -144,13 +144,13 @@
 	<chmod file="${build.base.dir}/pear/pinf/pinf" mode="755"/>
     
   </target>
-		<target name="dev-clean">
+  <target name="dev-clean">
 
-		<echo>-----------------------------</echo>
-		<echo>| Deleting ${build.base.dir} directory|</echo>
-		<echo>-----------------------------</echo>
+	<echo>-----------------------------</echo>
+	<echo>| Deleting ${build.base.dir} directory|</echo>
+	<echo>-----------------------------</echo>
 
-		<delete dir="${build.base.dir}"/>
-		</target>
+	<delete dir="${build.base.dir}"/>
+  </target>
 
 </project>
