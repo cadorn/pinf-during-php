@@ -9,6 +9,7 @@ version 1.8.0 is released on pear.zfcampus.org we can work on deployment packagi
 	------------
 
 	- UNIX
+  - SVN Client
 	- PHP 5.2+
 	- PEAR
   		- Phing:
