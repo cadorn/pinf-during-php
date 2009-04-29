@@ -40,6 +40,12 @@ if ! $PEAR_BIN info phing/phing 2>&1 >/dev/null; then
 		exit 1
 	fi
 fi
+if ! $PEAR_BIN info Console_Table 2>&1 >/dev/null; then
+	if ! $PEAR_BIN install Console_Table;then 
+		echo "Failed to install Console_Table which is required for PINF"
+		exit 1
+	fi
+fi
 if ! $PEAR_BIN info VersionControl_SVN 2>&1 >/dev/null; then
 	if ! $PEAR_BIN install channel://pear.php.net/VersionControl_SVN-0.3.1; then
 		echo "Failed to install VersionControl_SVN which is required for PINF"
