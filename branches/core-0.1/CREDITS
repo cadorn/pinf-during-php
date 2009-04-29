@@ -3,6 +3,7 @@
   -------------------
     
   Christoph Dorn <christoph@christophdorn.com>
+  Jess Portnoy <kernel01@gmail.com>
 
   If you've done work on PINF and you are not listed here, please feel free
   to add yourself.
@@ -20,6 +21,11 @@
     Phing is a PHP based build tool.
     (c) 2006 The Phing Project. All rights reserved.
     http://phing.info/
+
+  VersionControl_SVN
+	License: BSD License
+	VersionControl_SVN is a simple OO-style interface for Subversion.
+	Clay Loveless <clay@killersoft.com>
 
   PEAR
     License: PHP License, version 3.0
