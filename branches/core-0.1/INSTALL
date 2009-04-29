@@ -8,6 +8,7 @@ version 1.8.0 is released on pear.zfcampus.org we can work on deployment packagi
 To setup development environment for PINF run:
 
 	bootstrap.sh
+	Run with --help to print usage message.
 
 For detailed development setup info see:
 
