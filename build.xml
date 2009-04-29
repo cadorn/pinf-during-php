@@ -3,7 +3,7 @@
 <project name="org.pinf.package.Core" default="none" basedir=".">
 
   <property file="build.properties" />
-  
+  <property name="build.base.dir" value="build"/>
   <property name="mode" value="production"/>
   
 
@@ -140,8 +140,17 @@
   
     <echo msg="Installing PEAR package locally for development" />
     
-    <exec command="pear install -fn package.xml" passthru="true" dir="./build/pear/pinf"/>
+    <exec command="pear install -fn package.xml" passthru="true" dir="./${build.base.dir}/pear/pinf"/>
+	<chmod file="${build.base.dir}/pear/pinf/pinf" mode="755"/>
     
   </target>
+		<target name="dev-clean">
+
+		<echo>-----------------------------</echo>
+		<echo>| Deleting ${build.base.dir} directory|</echo>
+		<echo>-----------------------------</echo>
+
+		<delete dir="${build.base.dir}"/>
+		</target>
 
 </project>
