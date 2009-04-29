@@ -5,7 +5,7 @@ ZendFramework Integration
 
 - Wait for ZF 1.8.0 to be released on pear.zfcampus.org
   - Update /pear/package.xml
-  - Get PEAR packaging working so PINF can be installed via PEAR on any system
+  - Get PEAR packaging working so PINF can be installed via PEAR on any system - IN PROGRESS
 
 
 PEAR Integration
