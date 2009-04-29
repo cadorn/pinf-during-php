@@ -31,7 +31,7 @@ See http://code.google.com/p/pinf/source/checkout for specifics.
 phing dev-setup
 }}}
 
-_dev-setup_ will checkout a copy of Phing, ZendFramework and PHPUnit into _./build/pear_ and build and publish development bootstrap files for PINF into _./build/pear/pinf_ and install _./build/pear/pinf/package.xml_ using your default PEAR installer.
+_dev-setup_ will checkout a copy of [Phing], [ZendFramework] and [PHPUnit] into _./build/pear_ and build and publish development bootstrap files for PINF into _./build/pear/pinf_ and install _./build/pear/pinf/package.xml_ using your default PEAR installer.
 
 = Test =
 
