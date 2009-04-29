@@ -37,9 +37,14 @@ class FB {
         echo $table->getTable();
     } 
     
-    public function dump($variable)
+    public static function dump($variable)
     {
         var_dump($variable);
+    }     
+
+    public static function log($message, $label=null)
+    {
+        echo (($label)?$label.': ':'').$message . "\n";
     }     
 }
 

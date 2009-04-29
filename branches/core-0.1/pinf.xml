@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+
+<pinf xmlns="http://www.pinf.org/dtd/package-0.1" xmlns:pinf="http://www.pinf.org/dtd/package-0.1">
+
+  <package name="org.pinf.package.Core" stability="alpha">
+    
+    <version>0.1</version>
+
+    <environment alias="production">
+      <classpath>/pinf/org.pinf.package.Core</classpath>
+      <classpath>/</classpath>
+    </environment>
+  
+    <environment alias="development">
+      <classpath>./build/pear/pinf/org.pinf.package.Core</classpath>      
+      <classpath>./override</classpath>      
+      <classpath>./library</classpath>      
+      <classpath>./build/pear</classpath>      
+    </environment>
+  
+  </package>
+  
+</pinf>

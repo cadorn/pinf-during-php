@@ -1,10 +1,5 @@
 <?php
 
-require_once 'Zend/Tool/Framework/Loader/IncludePathLoader.php';
-
-require_once 'Zend/Tool/Framework/Manifest/Interface.php';
-require_once 'Zend/Tool/Framework/Provider/Interface.php';
-
 class PINF_Tool_Loader extends Zend_Tool_Framework_Loader_IncludePathLoader {
 
 
@@ -41,13 +36,12 @@ class PINF_Tool_Loader extends Zend_Tool_Framework_Loader_IncludePathLoader {
                 }
                 break;
         }
-        
         return $files;
     }
     
     
     /**
-     * Locate a file with path inn the include path and return
+     * Locate a file with path in the include path and return
      * the absolute filepath.
      * 
      * @param string $path The file/path to find
