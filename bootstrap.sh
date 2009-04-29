@@ -8,11 +8,13 @@ print_usage()
 {
 cat << EOF 
 
-	Usage: $0 [OPTIONS], where options are:
-	clean: removes the build dir
-	clean all: removes the build dir and runs the dev-setup target
-	
-	If no options are passed, default behavior is to run dev-setup.
+Usage:
+$0 [OPTIONS] 
+Where options are:
+clean: removes the build dir
+clean all: removes the build dir and runs the dev-setup target
+
+If no options are passed, default behavior is to run dev-setup.
 
 EOF
 
