@@ -1,7 +1,8 @@
 #!/bin/sh
 
-# Temporary bootstrapping script until PEAR packaging work is done so PINF can 
-# be installed via PEAR.
+######################################################
+# Bootstrapping script to setup PINF for development #
+######################################################
 
 PEAR_GUESS=`which pear`
 if [ -n "$PEAR_GUESS" ]; then
@@ -29,5 +30,4 @@ if ! $PEAR_BIN info VersionControl_SVN 2>&1 >/dev/null; then
 	fi
 fi
 BIN_DIR=`$PEAR_BIN config-get bin_dir`
-$BIN_DIR/phing build-setup
 $BIN_DIR/phing dev-setup

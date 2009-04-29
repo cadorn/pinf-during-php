@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<project name="alpha-org.pinf.package.Core" default="none" basedir=".">
+<project name="org.pinf.package.Core" default="none" basedir=".">
 
   <property file="build.properties" />
   
@@ -10,17 +10,11 @@
   <target name="none">
     <echo msg="There is no default target set!" />
   </target>
-
-
-  <target name="build-setup">
-    
-    <echo msg="Making directory ./build" />
-    <mkdir dir="./build" />
-
-  </target>
-
   
   <target name="prepare">
+
+    <echo msg="Making directory ./build" />
+    <mkdir dir="./build" />
     
     <delete dir="./build/pear/pinf" includeemptydirs="true" verbose="false" failonerror="true" />
   
@@ -39,6 +33,7 @@
           <token key="RELEASE" value="${release}" />
           <token key="build.pear.phing.version" value="${build.pear.phing.version}" />
           <token key="build.pear.zf.version" value="${build.pear.zf.version}" />
+          <token key="build.pear.phpunit.version" value="${build.pear.phpunit.version}" />
         </replacetokens>
       </filterchain>
     </copy>
@@ -94,69 +89,59 @@
       <schedule timer="A-1R_01-01-01"/>
     </pinf>
     -->
-    <property name="build.exists" value="false"/>
-		<available file="./build" property="build.exists" value="true"/>
+
+    <property name="build.pear.phing.exists" value="false"/>
+  	<available file="./build/pear/phing" property="build.pear.phing.exists" value="true"/>
     <if>
-      <equals arg1="${build.exists}" arg2="" />
+      <equals arg1="${build.pear.phing.exists}" arg2="1" />
       <then>
-		    <fail msg="You must run 'phing build-setup' first!" />
-			</then>
-			<else>
-
-        <property name="build.pear.phing.exists" value="false"/>
-    		<available file="./build/pear/phing" property="build.pear.phing.exists" value="true"/>
-        <if>
-          <equals arg1="${build.pear.phing.exists}" arg2="1" />
-          <then>
-            <!--
-            <echo msg="Updating Phing SVN:${build.pear.phing.svn.repository.url} checkout in ./build/pear/phing" />
-            <svnupdate svnpath="/usr/bin/svn"
-                       nocache="true"
-                       todir="./build/pear/phing"/>
-            -->
-    			</then>
-    			<else>
-            <echo msg="Checking out Phing from SVN:${build.pear.phing.svn.repository.url} to ./build/pear/phing" />
-            <svncheckout svnpath="/usr/bin/svn"
-                         nocache="true"
-                         repositoryurl="${build.pear.phing.svn.repository.url}"
-                         todir="./build/pear/phing"/>
-      	  </else>
-        </if>
-
-        <property name="build.pear.zf.exists" value="false"/>
-    		<available file="./build/pear/Zend" property="build.pear.zf.exists" value="true"/>
-        <if>
-          <equals arg1="${build.pear.zf.exists}" arg2="" />
-          <then>
-            <echo msg="Checking out ZendFramework from SVN:${build.pear.zf.svn.repository.url} to ./build/pear/Zend" />
-            <svncheckout svnpath="/usr/bin/svn"
-                         nocache="true"
-                         repositoryurl="${build.pear.zf.svn.repository.url}"
-                         todir="./build/pear/Zend"/>
-    			</then>
-        </if>
-
-        <property name="build.pear.phpunit.exists" value="false"/>
-    		<available file="./build/pear/PHPUnit" property="build.pear.phpunit.exists" value="true"/>
-        <if>
-          <equals arg1="${build.pear.phpunit.exists}" arg2="" />
-          <then>
-            <echo msg="Checking out PHPUnit from SVN:${build.pear.phpunit.svn.repository.url} to ./build/pear/PHPUnit" />
-            <svncheckout svnpath="/usr/bin/svn"
-                         nocache="true"
-                         repositoryurl="${build.pear.phpunit.svn.repository.url}"
-                         todir="./build/pear/PHPUnit"/>
-    			</then>
-        </if>
-
-
-        <echo msg="Installing PEAR package locally for development" />
-        
-        <exec command="pear install -fn package.xml" passthru="true" dir="./build/pear/pinf"/>
-        
-			</else>
+        <!--
+        <echo msg="Updating Phing SVN:${build.pear.phing.svn.repository.url} checkout in ./build/pear/phing" />
+        <svnupdate svnpath="/usr/bin/svn"
+                   nocache="true"
+                   todir="./build/pear/phing"/>
+        -->
+  		</then>
+  		<else>
+        <echo msg="Checking out Phing from SVN:${build.pear.phing.svn.repository.url} to ./build/pear/phing" />
+        <svncheckout svnpath="/usr/bin/svn"
+                     nocache="true"
+                     repositoryurl="${build.pear.phing.svn.repository.url}"
+                     todir="./build/pear/phing"/>
+  	  </else>
     </if>
+  
+    <property name="build.pear.zf.exists" value="false"/>
+  	<available file="./build/pear/Zend" property="build.pear.zf.exists" value="true"/>
+    <if>
+      <equals arg1="${build.pear.zf.exists}" arg2="" />
+      <then>
+        <echo msg="Checking out ZendFramework from SVN:${build.pear.zf.svn.repository.url} to ./build/pear/Zend" />
+        <svncheckout svnpath="/usr/bin/svn"
+                     nocache="true"
+                     repositoryurl="${build.pear.zf.svn.repository.url}"
+                     todir="./build/pear/Zend"/>
+  		</then>
+    </if>
+  
+    <property name="build.pear.phpunit.exists" value="false"/>
+  	<available file="./build/pear/PHPUnit" property="build.pear.phpunit.exists" value="true"/>
+    <if>
+      <equals arg1="${build.pear.phpunit.exists}" arg2="" />
+      <then>
+        <echo msg="Checking out PHPUnit from SVN:${build.pear.phpunit.svn.repository.url} to ./build/pear/PHPUnit" />
+        <svncheckout svnpath="/usr/bin/svn"
+                     nocache="true"
+                     repositoryurl="${build.pear.phpunit.svn.repository.url}"
+                     todir="./build/pear/PHPUnit"/>
+  		</then>
+    </if>
+  
+  
+    <echo msg="Installing PEAR package locally for development" />
+    
+    <exec command="pear install -fn package.xml" passthru="true" dir="./build/pear/pinf"/>
+    
   </target>
 
 </project>
