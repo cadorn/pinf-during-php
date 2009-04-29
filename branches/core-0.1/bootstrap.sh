@@ -4,6 +4,23 @@
 # Bootstrapping script to setup PINF for development #
 ######################################################
 
+print_usage()
+{
+cat << EOF 
+
+	Usage: $0 [OPTIONS], where options are:
+	clean: removes the build dir
+	clean all: removes the build dir and runs the dev-setup target
+	
+	If no options are passed, default behavior is to run dev-setup.
+
+EOF
+
+}
+if [ "$1" = '--help' ];then
+	print_usage
+	exit 1
+fi
 PEAR_GUESS=`which pear`
 if [ -n "$PEAR_GUESS" ]; then
 	PRINT_DEFAULT_PEAR="[$PEAR_GUESS]"
@@ -30,4 +47,9 @@ if ! $PEAR_BIN info VersionControl_SVN 2>&1 >/dev/null; then
 	fi
 fi
 BIN_DIR=`$PEAR_BIN config-get bin_dir`
-$BIN_DIR/phing dev-setup
+if [ "$1" = 'clean' ];then
+	phing dev-clean
+fi
+if [ $# -eq 0 -o "$2" = "all" ];then
+	$BIN_DIR/phing dev-setup
+fi
