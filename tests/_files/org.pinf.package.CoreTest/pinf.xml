@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<pinf xmlns="http://www.pinf.org/dtd/package-0.1" xmlns:pinf="http://www.pinf.org/dtd/package-0.1">
+
+  <package name="org.pinf.package.CoreTest" stability="alpha">
+    
+    <version>0.1</version>
+
+    <environment alias="development">
+      <classpath>./library</classpath>      
+    </environment>
+    
+    <providers>
+      <class name="HelloWorld"/>
+    </providers>
+  
+  </package>
+  
+</pinf>

@@ -29,6 +29,12 @@ set_include_path(implode(PATH_SEPARATOR, $includePaths));
 unset($includePaths);
 
 
-require_once 'PINF/Tool/Client/Console.php';
+require_once 'Zend/Loader/Autoloader.php';
+$loader = Zend_Loader_Autoloader::getInstance()->setFallbackAutoloader(true);
+$loader->setDefaultAutoloader(array('PINF_Loader','autoload'));
+
+
+PINF::SetMode('##MODE##');
+PINF::SetEnvironment(new PINF_Environment());
 
 PINF_Tool_Client_Console::main();
