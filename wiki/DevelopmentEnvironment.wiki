@@ -3,7 +3,7 @@
 = Requirements =
 
   * UNIX
-  * SVN Client
+  * SVN Client (used by PEAR:VersionControl_SVN)
   * PHP 5.2+
   * PEAR
 
