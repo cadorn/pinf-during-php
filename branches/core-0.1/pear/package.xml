@@ -80,8 +80,6 @@
     </package>
     -->
   </required>
-  <optional>
-  </optional>
   </dependencies>
  <phprelease />
 </package>
