@@ -28,7 +28,6 @@ The bootstrap script will:
 
   * Install [Phing]
   * Install [PEAR:VersionControl_SVN]
-  * Install [PEAR:Console_Table]
   * Checkout source copies of [Phing], [ZendFramework] and [PHPUnit] into _./build/pear_
   * Build and publish development bootstrap files for PINF into _./build/pear/pinf_
   * Install _./build/pear/pinf/package.xml_ using your default PEAR installer
