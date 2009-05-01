@@ -67,15 +67,11 @@
       <channel>pear.phpunit.de</channel>
       <min>##build.pear.phpunit.version##</min>
     </package>
-    <!--
-      TODO: When ZF 1.8.0 is released on PEAR channel uncomment this
     <package>
-      <name>zf_minimal</name>
+      <name>zf</name>
       <channel>pear.zfcampus.org</channel>
       <min>##build.pear.zf.version##</min>
-      <recommended>##build.pear.zf.version##</recommended>
     </package>
-    -->
   </required>
   </dependencies>
  <phprelease />
