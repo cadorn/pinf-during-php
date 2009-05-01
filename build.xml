@@ -140,8 +140,10 @@
   
     <echo msg="Installing PEAR package locally for development" />
     
-    <exec command="pear install -fn package.xml" passthru="true" dir="./${build.base.dir}/pear/pinf"/>
-	<chmod file="${build.base.dir}/pear/pinf/pinf" mode="755"/>
+    <exec command="pear channel-discover pear.pinf.org" passthru="true" dir="./${build.base.dir}/pear/pinf"/>
+    
+    <exec command="pear install --onlyreqdeps -f package.xml" passthru="true" dir="./${build.base.dir}/pear/pinf"/>
+	  <chmod file="${build.base.dir}/pear/pinf/pinf" mode="755"/>
     
   </target>
   <target name="dev-clean">
