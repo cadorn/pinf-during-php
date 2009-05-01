@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <package packagerversion="1.7.1" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0                http://pear.php.net/dtd/tasks-1.0.xsd                http://pear.php.net/dtd/package-2.0                http://pear.php.net/dtd/package-2.0.xsd">
-  
+
  <name>Core</name>
- <channel>pear.php.net</channel>
+ <channel>pear.pinf.org</channel>
  <summary>An intelligent command-line project, application, package and plugin management system.</summary>
  <description>For more information about the PINF PackageManager please see: http://code.google.com/p/pinf/</description>
  <lead>
@@ -56,19 +56,16 @@
       <name>phing</name>
       <channel>pear.phing.info</channel>
       <min>##build.pear.phing.version##</min>
-      <recommended>##build.pear.phing.version##</recommended>
     </package>
     <package>
       <name>Console_Table</name>
       <channel>pear.php.net</channel>
       <min>1.1.3</min>
-      <recommended>1.1.3</recommended>
     </package>
     <package>
       <name>PHPUnit</name>
       <channel>pear.phpunit.de</channel>
       <min>##build.pear.phpunit.version##</min>
-      <recommended>##build.pear.phpunit.version##</recommended>
     </package>
     <!--
       TODO: When ZF 1.8.0 is released on PEAR channel uncomment this
