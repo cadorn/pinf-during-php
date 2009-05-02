@@ -140,7 +140,9 @@
   
     <echo msg="Installing PEAR package locally for development" />
     
-    <exec command="pear channel-discover pear.pinf.org" passthru="true" dir="./${build.base.dir}/pear/pinf"/>
+    <exec command="pear channel-discover pear.pinf.org" passthru="true"/>
+    <exec command="pear channel-discover pear.phpunit.de" passthru="true"/>
+    <exec command="pear channel-discover pear.zfcampus.org" passthru="true"/>
     
     <exec command="pear install --onlyreqdeps -f package.xml" passthru="true" dir="./${build.base.dir}/pear/pinf"/>
 	  <chmod file="${build.base.dir}/pear/pinf/pinf" mode="755"/>
@@ -148,11 +150,22 @@
   </target>
   <target name="dev-clean">
 
-	<echo>-----------------------------</echo>
-	<echo>| Deleting ${build.base.dir} directory|</echo>
-	<echo>-----------------------------</echo>
+  	<echo>Deleting ${build.base.dir} directory.</echo>
+  
+  	<delete dir="${build.base.dir}"/>
+    
+  	<echo>Uninstalling and removing channels</echo>
 
-	<delete dir="${build.base.dir}"/>
+    <exec command="pear uninstall pinf/Core" passthru="true"/>
+    <exec command="pear channel-delete pinf" passthru="true"/>
+    <exec command="pear uninstall pear/Console_Table" passthru="true"/>
+    <exec command="pear uninstall phing/phing" passthru="true"/>
+    <exec command="pear channel-delete phing" passthru="true"/>
+    <exec command="pear uninstall phpunit/phpunit" passthru="true"/>
+    <exec command="pear channel-delete phpunit" passthru="true"/>
+    <exec command="pear uninstall zfcampus/zf" passthru="true"/>
+    <exec command="pear channel-delete zfcampus" passthru="true"/>
+
   </target>
 
 </project>

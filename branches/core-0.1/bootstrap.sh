@@ -42,6 +42,10 @@ if ! $PEAR_BIN info phing/phing 2>&1 >/dev/null; then
 		exit 1
 	fi
 fi
+if [ "$1" = 'clean' ];then
+	phing dev-clean
+	# TODO: Exit if just "clean" is specified
+fi
 if ! $PEAR_BIN info VersionControl_SVN 2>&1 >/dev/null; then
 	if ! $PEAR_BIN install channel://pear.php.net/VersionControl_SVN-0.3.1; then
 		echo "Failed to install VersionControl_SVN which is required for PINF"
@@ -49,9 +53,6 @@ if ! $PEAR_BIN info VersionControl_SVN 2>&1 >/dev/null; then
 	fi
 fi
 BIN_DIR=`$PEAR_BIN config-get bin_dir`
-if [ "$1" = 'clean' ];then
-	phing dev-clean
-fi
 if [ $# -eq 0 -o "$2" = "all" ];then
 	$BIN_DIR/phing dev-setup
 fi
