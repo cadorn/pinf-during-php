@@ -1,18 +1,2 @@
 
-TODO
-----
-
-  - bootstrap.sh line 47
-
-
-ZendFramework Integration
--------------------------
-
-  - Get PEAR packaging working so PINF can be installed via PEAR on any system - IN PROGRESS
-
-
-PEAR Integration
-----------------
-
-  - Running "pinf pear help" exits for some reason and does not display same as "pear help"
-
+Please see http://code.google.com/p/pinf/wiki/TODO
