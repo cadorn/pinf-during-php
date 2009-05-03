@@ -4,7 +4,7 @@
 
   * Contributor with extensive windows experience
 
-= TODO =
+= Outstanding =
 
   * bootstrap.sh line 47
   * ZendFramework
