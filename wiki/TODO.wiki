@@ -14,5 +14,5 @@
 
 = Ideas =
 
-  * Eclipse insight for <URI> in PINF::Call('<URI>') for registered call handlers, packages and providers
+  * Eclipse insight for `<URI>` in `PINF::Call('<URI>')` for registered call handlers, packages and providers
     * http://code.google.com/p/jspde/
