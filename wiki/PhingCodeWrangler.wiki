@@ -1,5 +1,4 @@
 #summary Phing task for patching and transforming source files
-#labels phing,codewrangler
 
 = Introduction =
 
