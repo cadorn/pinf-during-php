@@ -18,3 +18,8 @@ It is licensed under the [http://www.opensource.org/licenses/bsd-license.php New
   * Must have unit tests
   * Must have documentation
   * Must be licensed under the New BSD License
+
+= Reference =
+
+|| *Function* || *Description* ||
+|| [http://code.google.com/p/pinf/source/browse/trunk/StandardLibrary/functions/scandir_recursive.php scandir_recursive] || List files and directories recursively inside the specified path ||
