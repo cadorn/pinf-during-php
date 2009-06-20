@@ -9,17 +9,19 @@
  * @author Christoph Dorn <christoph@christophdorn.com>
  */
 
-function scandir_recursive($basePath, &$paths=array())
+function scandir_recursive($basePath, $traversalPath='', &$paths=array())
 {
 //    if(substr($basePath,-1,1)==DIRECTORY_SEPARATOR)
 //    {
 //        $basePath = substr($basePath, 0, -1);
 //    }
-    foreach(array_diff(scandir($basePath), array('.', '..')) as $path)
+    foreach(array_diff(scandir($basePath . DIRECTORY_SEPARATOR . $traversalPath), array('.', '..')) as $path)
     {
+        $path = (($traversalPath)?$traversalPath.DIRECTORY_SEPARATOR:'') . $path;
         $paths[] = $path;
-        if(is_dir($path)) {
-            $paths = scandir_recursive($basePath . DIRECTORY_SEPARATOR . $path, 
+        if(is_dir($basePath . DIRECTORY_SEPARATOR . $path)) {
+            $paths = scandir_recursive($basePath, 
+                                       $path,
                                        $paths);
         }
     }
