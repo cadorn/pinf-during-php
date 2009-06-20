@@ -1,0 +1,171 @@
+<?xml version="1.0"?>
+
+<project name="org.pinf.package.Core" default="none" basedir=".">
+
+  <property file="build.properties" />
+  <property name="build.base.dir" value="build"/>
+  <property name="mode" value="production"/>
+  
+
+  <target name="none">
+    <echo msg="There is no default target set!" />
+  </target>
+  
+  <target name="prepare">
+
+    <echo msg="Making directory ./build" />
+    <mkdir dir="./build" />
+    
+    <delete dir="./build/pear/pinf" includeemptydirs="true" verbose="false" failonerror="true" />
+  
+  </target>
+
+
+  <target name="build" depends="prepare">
+
+    <php expression="date('Y-m-d')" returnProperty="date"/>
+
+    <copy file="./pear/package.xml" tofile="./build/pear/pinf/package.xml">
+      <filterchain>
+        <replacetokens begintoken="##" endtoken="##">
+          <token key="DATE" value="${date}" />
+          <token key="VERSION" value="${version}" />
+          <token key="RELEASE" value="${release}" />
+          <token key="build.pear.phing.version" value="${build.pear.phing.version}" />
+          <token key="build.pear.zf.version" value="${build.pear.zf.version}" />
+          <token key="build.pear.phpunit.version" value="${build.pear.phpunit.version}" />
+        </replacetokens>
+      </filterchain>
+    </copy>
+
+    <copy file="./bin/pinf-pear" tofile="./build/pear/pinf/pinf"/>
+    <copy file="./bin/pinf.php" tofile="./build/pear/pinf/pinf.php">
+      <filterchain>
+        <replacetokens begintoken="##" endtoken="##">
+          <token key="MODE" value="${mode}" />
+          <token key="DEV-PACKAGE-DIR" value="${project.basedir}" />
+        </replacetokens>
+      </filterchain>
+    </copy>
+        
+    <if>
+      <equals arg1="${mode}" arg2="production" />
+      <then>
+
+        <copy todir="./build/pear/pinf/org.pinf.package.PackageManager" >
+          <fileset dir="./library"/>
+        </copy>
+        <copy todir="./build/pear/pinf/org.pinf.package.PackageManager" >
+          <fileset dir="./override"/>
+        </copy>
+
+			</then>
+    </if>    
+
+    <copy file="./library/PINF/Core/Version.php" tofile="./build/pear/pinf/org.pinf.package.Core/PINF/Core/Version.php">
+      <filterchain>
+        <replacetokens begintoken="##" endtoken="##">
+          <token key="VERSION" value="${version}" />
+          <token key="RELEASE" value="${release}" />
+        </replacetokens>
+      </filterchain>
+    </copy>
+
+  </target>
+
+  <target name="dev-env-setup">
+    <property name="mode" value="development" override="true"/>
+  </target>
+
+  <target name="dev-setup" depends="dev-env-setup, build">
+        
+    <!--
+    TODO: - Enable PINF to attach to targets
+    <pinf task="target">
+          - Schedule this target to run every "timer"
+            Timer format: m-d_H-i-s (see date())
+              * Use 'A' to denote: all increments
+              * Use '\dR'(preg) to denote: repeat for all '\d' increments
+      <schedule timer="A-1R_01-01-01"/>
+    </pinf>
+    -->
+
+    <property name="build.pear.phing.exists" value="false"/>
+  	<available file="./build/pear/phing" property="build.pear.phing.exists" value="true"/>
+    <if>
+      <equals arg1="${build.pear.phing.exists}" arg2="1" />
+      <then>
+        <!--
+        <echo msg="Updating Phing SVN:${build.pear.phing.svn.repository.url} checkout in ./build/pear/phing" />
+        <svnupdate svnpath="/usr/bin/svn"
+                   nocache="true"
+                   todir="./build/pear/phing"/>
+        -->
+  		</then>
+  		<else>
+        <echo msg="Checking out Phing from SVN:${build.pear.phing.svn.repository.url} to ./build/pear/phing" />
+        <svncheckout svnpath="/usr/bin/svn"
+                     nocache="true"
+                     repositoryurl="${build.pear.phing.svn.repository.url}"
+                     todir="./build/pear/phing"/>
+  	  </else>
+    </if>
+  
+    <property name="build.pear.zf.exists" value="false"/>
+  	<available file="./build/pear/Zend" property="build.pear.zf.exists" value="true"/>
+    <if>
+      <equals arg1="${build.pear.zf.exists}" arg2="" />
+      <then>
+        <echo msg="Checking out ZendFramework from SVN:${build.pear.zf.svn.repository.url} to ./build/pear/Zend" />
+        <svncheckout svnpath="/usr/bin/svn"
+                     nocache="true"
+                     repositoryurl="${build.pear.zf.svn.repository.url}"
+                     todir="./build/pear/Zend"/>
+  		</then>
+    </if>
+  
+    <property name="build.pear.phpunit.exists" value="false"/>
+  	<available file="./build/pear/PHPUnit" property="build.pear.phpunit.exists" value="true"/>
+    <if>
+      <equals arg1="${build.pear.phpunit.exists}" arg2="" />
+      <then>
+        <echo msg="Checking out PHPUnit from SVN:${build.pear.phpunit.svn.repository.url} to ./build/pear/PHPUnit" />
+        <svncheckout svnpath="/usr/bin/svn"
+                     nocache="true"
+                     repositoryurl="${build.pear.phpunit.svn.repository.url}"
+                     todir="./build/pear/PHPUnit"/>
+  		</then>
+    </if>
+  
+  
+    <echo msg="Installing PEAR package locally for development" />
+    
+    <exec command="pear channel-discover pear.pinf.org" passthru="true"/>
+    <exec command="pear channel-discover pear.phpunit.de" passthru="true"/>
+    <exec command="pear channel-discover pear.zfcampus.org" passthru="true"/>
+    
+    <exec command="pear install --onlyreqdeps -f package.xml" passthru="true" dir="./${build.base.dir}/pear/pinf"/>
+	  <chmod file="${build.base.dir}/pear/pinf/pinf" mode="755"/>
+    
+  </target>
+  <target name="dev-clean">
+
+  	<echo>Deleting ${build.base.dir} directory.</echo>
+  
+  	<delete dir="${build.base.dir}"/>
+    
+  	<echo>Uninstalling and removing channels</echo>
+
+    <exec command="pear uninstall pinf/Core" passthru="true"/>
+    <exec command="pear channel-delete pinf" passthru="true"/>
+    <exec command="pear uninstall pear/Console_Table" passthru="true"/>
+    <exec command="pear uninstall phing/phing" passthru="true"/>
+    <exec command="pear channel-delete phing" passthru="true"/>
+    <exec command="pear uninstall phpunit/phpunit" passthru="true"/>
+    <exec command="pear channel-delete phpunit" passthru="true"/>
+    <exec command="pear uninstall zfcampus/zf" passthru="true"/>
+    <exec command="pear channel-delete zfcampus" passthru="true"/>
+
+  </target>
+
+</project>

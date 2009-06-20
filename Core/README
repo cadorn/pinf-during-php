@@ -1,0 +1,23 @@
+
+  PINF Core
+  ---------
+  
+	An intelligent command-line tool for project, application, package and plugin
+	development, debugging, testing, distribution, deployment and general management. 
+	
+
+	Direcotry Structure
+	-------------------
+
+	/bin			Scripts that will be installed via PINF when your package is installed
+	/build    Temporary built files used for your local environment or packaging
+	/library  Library and application files for PINF
+	/override Codefiles that override specific files from your include path
+	  /Zend/Build/Phing			ZF component incubating for standard library inclusion
+	/pear     Utility files for PEAR packager
+	build.*   Build utility files for Phing
+	/doc
+	/etc
+	/classes
+	
+

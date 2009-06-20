@@ -1,0 +1,20 @@
+
+Development Setup
+-----------------
+
+This package can only be used in a development setting at this time. Once ZendFramework
+version 1.8.0 is released on pear.zfcampus.org we can work on deployment packaging.
+
+To setup your development environment for PINF run:
+
+	bootstrap.sh
+	Run with --help to print usage message.
+	
+To update your development environment simply re-run bootstrap.sh. On occasion the SVN paths
+and versions to some of the integrated tools will change. In these cases you will need to run:
+
+  bootstrap.sh clean all
+
+For detailed development setup info see:
+
+	http://code.google.com/p/pinf/wiki/DevelopmentEnvironment
