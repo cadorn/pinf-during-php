@@ -8,7 +8,7 @@ It is widely compatible just like PHP itself and is collectively maintained just
 
 It is licensed under the [http://www.opensource.org/licenses/bsd-license.php New BSD License].
 
-= Requirements for new Functions and Classes =
+= Requirements for Functions and Classes =
 
   * Must support all platforms and environments as PHP does
   * Must complement the Standard PHP Library (SPL) and PHP Functions  (PF) in all ways
