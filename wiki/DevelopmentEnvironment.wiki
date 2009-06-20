@@ -38,10 +38,20 @@ To update your development environment simply re-run bootstrap.sh. On occasion t
 bootstrap.sh clean all
 }}}
 
-= Test =
+= Verify Setup =
 
-If the following command works the core of PINF is installed successfully (in development mode).
+If the following command works the core of PINF should be installed successfully (in development mode).
 
 {{{
 pinf show version
 }}}
+
+== Running Unit Tests ==
+
+To verify that all PINF features are working as intended you can run the test suite.
+
+{{{
+cd tests
+pinf phpunit AllTests
+}}}
+
