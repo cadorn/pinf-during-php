@@ -4,6 +4,8 @@ PINF needs you. If you are good with PHP and want to improve your daily developm
 
 = How to get involved =
 
+Setup a DevelopmentEnvironment and run the unit tests.
+
 Join the [http://groups.google.com/group/pinf-dev mailing list].
 
 Join [http://www.freenode.net/ #pinf at irc.freenode.net].
