@@ -1,0 +1,30 @@
+
+  PINF Standard Library
+  ---------------------
+
+  The PINF Standard Library provides useful additions to the Standard PHP Library and PHP Functions.
+  
+  It is widely compatible just like PHP itself and is collectively maintained just like PHP.
+  
+  It is licensed under the New BSD License.
+  
+  
+  References
+  ----------
+  
+    * http://www.phpro.org/tutorials/Introduction-to-SPL.html
+    * http://us2.php.net/manual/en/funcref.php
+    * http://www.opensource.org/licenses/bsd-license.php
+  
+  
+  Requirements for new Functions and Classes
+  ------------------------------------------
+  
+    * Must support all platforms and environments as PHP does
+    * Must complement the Standard PHP Library (SPL) and PHP Functions  (PF) in all ways
+    * Must follow a naming scheme that works in harmony with the (SPL & PF)
+    * Must accomplish its task in the most efficient and compact manner using the SPL & PF
+    * Must be open to community review
+    * Must have unit tests
+    * Must have documentation
+    * Must be licensed under the New BSD License
