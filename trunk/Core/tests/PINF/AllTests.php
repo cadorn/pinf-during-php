@@ -19,6 +19,8 @@ class PINF_AllTests
         $suite = new PHPUnit_Framework_TestSuite('PINF Core - PINF');
 
         $suite->addTestSuite('PINF_CallTest');
+        
+        $suite->addTestSuite(PINF_StandardLibrary_functions_AllTests::suite());
 
         return $suite;
     }
