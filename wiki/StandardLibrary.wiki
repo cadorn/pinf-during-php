@@ -21,7 +21,7 @@ It is licensed under the [http://www.opensource.org/licenses/bsd-license.php New
 
 = Download =
 
-You can checkout the source here: [https://pinf.googlecode.com/svn/trunk/StandardLibrary]
+You can checkout the source here: [http://pinf.googlecode.com/svn/trunk/StandardLibrary]
 
 = Tests =
 
