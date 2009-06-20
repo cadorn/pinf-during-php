@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<package packagerversion="1.7.1" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0                http://pear.php.net/dtd/tasks-1.0.xsd                http://pear.php.net/dtd/package-2.0                http://pear.php.net/dtd/package-2.0.xsd">
+
+ <name>Core</name>
+ <channel>pear.pinf.org</channel>
+ <summary>An intelligent command-line project, application, package and plugin management system.</summary>
+ <description>For more information about the PINF PackageManager please see: http://code.google.com/p/pinf/</description>
+ <lead>
+  <name>Christoph Dorn</name>
+  <user>cadorn</user>
+  <email>christoph@christophdorn.com</email>
+  <active>yes</active>
+ </lead>
+ 
+ <date>##DATE##</date>
+ <version>
+  <release>##VERSION####RELEASE##</release>
+  <api>##VERSION####RELEASE##</api>
+ </version>
+ 
+ <stability>
+  <release>alpha</release>
+  <api>alpha</api>
+ </stability>
+ 
+ <license>LGPL</license>
+ 
+ <notes>No Notes</notes>
+ 
+ <contents>
+  
+  <dir name="/">
+  
+    <file baseinstalldir="/" name="pinf" to="pinf" role="script">
+      <tasks:replace from="@PHP-BIN@" to="php_bin" type="pear-config" />
+      <tasks:replace from="@PEAR-DIR@" to="php_dir" type="pear-config" />
+      <tasks:replace from="@DATA-DIR@" to="data_dir" type="pear-config" />
+    </file>
+    <file baseinstalldir="/" name="pinf.php" role="php">
+      <tasks:replace from="@PEAR-DIR@" to="php_dir" type="pear-config" />
+    </file>
+
+  </dir>
+  
+  </contents>
+  <dependencies>
+  <required>
+    <php>
+      <min>5.2.0</min>
+    </php>
+    <pearinstaller>
+      <min>1.7.2</min>
+    </pearinstaller>
+    <package>
+      <name>phing</name>
+      <channel>pear.phing.info</channel>
+      <min>##build.pear.phing.version##</min>
+    </package>
+    <package>
+      <name>Console_Table</name>
+      <channel>pear.php.net</channel>
+      <min>1.1.3</min>
+    </package>
+    <package>
+      <name>PHPUnit</name>
+      <channel>pear.phpunit.de</channel>
+      <min>##build.pear.phpunit.version##</min>
+    </package>
+    <package>
+      <name>zf</name>
+      <channel>pear.zfcampus.org</channel>
+      <min>##build.pear.zf.version##</min>
+    </package>
+  </required>
+  </dependencies>
+ <phprelease />
+</package>
