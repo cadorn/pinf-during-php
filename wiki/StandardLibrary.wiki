@@ -2,7 +2,7 @@
 
 = Introduction =
 
-The PINF Standard Library provides useful additions to the [http://www.phpro.org/tutorials/Introduction-to-SPL.html Standard PHP Library] and [http://us2.php.net/manual/en/funcref.php PHP Functions].
+The PINF Standard Library (PINFSL) provides useful additions to the [http://www.phpro.org/tutorials/Introduction-to-SPL.html Standard PHP Library] and [http://us2.php.net/manual/en/funcref.php PHP Functions].
 
 It is widely compatible just like PHP itself and is collectively maintained just like PHP.
 
@@ -18,6 +18,14 @@ It is licensed under the [http://www.opensource.org/licenses/bsd-license.php New
   * Must have unit tests
   * Must have documentation
   * Must be licensed under the New BSD License
+
+= Download =
+
+You can checkout the source here: [https://pinf.googlecode.com/svn/trunk/StandardLibrary]
+
+= Tests =
+
+Run the PINFSL tests from your DevelopmentEnvironment.
 
 = Reference =
 
