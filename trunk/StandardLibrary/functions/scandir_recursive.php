@@ -15,7 +15,8 @@ function scandir_recursive($basePath, $traversalPath='', &$paths=array())
 //    {
 //        $basePath = substr($basePath, 0, -1);
 //    }
-    foreach(array_diff(scandir($basePath . DIRECTORY_SEPARATOR . $traversalPath), array('.', '..')) as $path)
+    foreach(array_diff(scandir($basePath . DIRECTORY_SEPARATOR . $traversalPath),
+                       array('.', '..')) as $path)
     {
         $path = (($traversalPath)?$traversalPath.DIRECTORY_SEPARATOR:'') . $path;
         $paths[] = $path;
