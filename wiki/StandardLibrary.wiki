@@ -3,9 +3,9 @@
 = Introduction =
 
 The PINF Standard Library provides useful additions to the [http://www.phpro.org/tutorials/Introduction-to-SPL.html Standard PHP Library] and [http://us2.php.net/manual/en/funcref.php PHP Functions].
-  
+
 It is widely compatible just like PHP itself and is collectively maintained just like PHP.
-  
+
 It is licensed under the [http://www.opensource.org/licenses/bsd-license.php New BSD License].
 
 = Requirements for new Functions and Classes =
