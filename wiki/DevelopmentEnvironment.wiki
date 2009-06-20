@@ -9,7 +9,7 @@
 
 = Checkout =
 
-PINF Core: http://pinf.googlecode.com/svn/branches/core-0.1/
+PINF Core: http://pinf.googlecode.com/svn/trunk/Core
 
 See http://code.google.com/p/pinf/source/checkout for specifics.
 
@@ -54,4 +54,3 @@ To verify that all PINF features are working as intended you can run the test su
 cd tests
 pinf phpunit AllTests
 }}}
-
