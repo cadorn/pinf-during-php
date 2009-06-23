@@ -1,6 +1,6 @@
 <?php
 
-class Zend_Test_PHPUnit_Client_Console
+class ZendL_Test_PHPUnit_Client_Console
 {
   
   
