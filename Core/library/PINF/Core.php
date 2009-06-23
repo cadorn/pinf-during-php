@@ -37,6 +37,8 @@ class PINF_Core
     {
         $uriParts = parse_url($uri);
         
+        // TODO: Call handlers are wildfire channel plugins
+        
         $handlerClass = 'PINF_Call_Handler_'.ucfirst(strtolower($uriParts['scheme']));
         
         $handler = new $handlerClass();

@@ -3,7 +3,7 @@
 require_once 'phing/Phing.php';
 
 
-class ZendL_Build_Phing_Client_Console
+class ZFI_Build_Phing_Client_Console
 {
   
   

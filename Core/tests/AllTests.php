@@ -24,6 +24,7 @@ class AllTests
         $suite = new PHPUnit_Framework_TestSuite('PINF Core');
 
         $suite->addTest(PINF_AllTests::suite());
+        $suite->addTest(ZFI_AllTests::suite());
 
         return $suite;
     }

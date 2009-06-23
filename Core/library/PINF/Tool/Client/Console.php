@@ -19,7 +19,7 @@ class PINF_Tool_Client_Console extends Zend_Tool_Framework_Client_Console {
               array_splice($_SERVER['argv'], 1, 1);
               $_SERVER['argc'] -= 1;
       
-              Zend_Build_Phing_Client_Console::main();
+              ZFI_Build_Phing_Client_Console::main();
               break;
 
           case 'pear':
@@ -47,7 +47,7 @@ class PINF_Tool_Client_Console extends Zend_Tool_Framework_Client_Console {
               array_splice($_SERVER['argv'], 1, 1);
               $_SERVER['argc'] -= 1;
       
-              Zend_Test_PHPUnit_Client_Console::main();
+              ZFI_Test_PHPUnit_Client_Console::main();
               break;
 
           default:
