@@ -19,4 +19,5 @@ See: [PEAR], [Phing], [ZendFramework], [PHPUnit]
 
 {{{
 pinf show version
+pinf list packages
 }}}
