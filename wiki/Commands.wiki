@@ -10,9 +10,10 @@ The _pinf_ command line tool provides a single point of access to your entire PH
 pinf pear *
 pinf phing *
 pinf zf *
+pinf phpunit *
 }}}
 
-See: [PEAR], [Phing], [ZendFramework]
+See: [PEAR], [Phing], [ZendFramework], [PHPUnit]
 
 = PINF commands =
 
