@@ -10,9 +10,9 @@ PINF is developed using [http://www.eclipse.org/ eclipse] as the IDE, but you do
     # *Data Tools Platform (DTP)*: http://download.eclipse.org/datatools/updates
     # *AWS Toolkit for Eclipse*: http://aws.amazon.com/eclipse
     # SVN Clients
-      * *Subclipse*: http://subclipse.tigris.org/update_1.6.x
+      * *[http://subclipse.tigris.org/ Subclipse]*: http://subclipse.tigris.org/update_1.6.x
       OR
-      * *Subversive*: http://download.eclipse.org/technology/subversive/0.7/update-site
+      * *[http://www.eclipse.org/subversive/ Subversive]*: http://download.eclipse.org/technology/subversive/0.7/update-site
         * *Connectors*: http://community.polarion.com/projects/subversive/download/eclipse/2.0/update-site
           * _Native JavaHL_ or _SVNKit_
           * You may need to install SVN Java bindings if using the _Native JavaHL_ connector.
