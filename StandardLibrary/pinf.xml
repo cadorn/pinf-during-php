@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+
+<pinf xmlns="http://www.pinf.org/dtd/package-0.1" xmlns:pinf="http://www.pinf.org/dtd/package-0.1">
+
+  <package name="org.pinf.StandardLibrary" stability="alpha">
+    
+    <version>0.1</version>
+
+    <tests default="primary">
+
+      <group type="unit" name="primary">
+        
+        <test type="PHPUnit" path="./tests/functions/AllTests.php" args="--exclude-group EXTENDED-TEST"/>
+        
+      </group>
+      
+    </tests>
+
+  </package>
+  
+</pinf>

@@ -1,9 +1,10 @@
 <?php
 
-require_once dirname(dirname(__FILE__)) . DIRECTORY_SEPARATOR . 'TestHelper.php';
+if(!defined('PINF_TEST_FRAMEWORK')) {
+    throw new Exception('This PHPUnit test must be run via PINF!');
+}
 
-
-class PINF_StandardLibrary_functions_scandirRecursiveTest extends PHPUnit_Framework_TestCase
+class scandir_recursive_test extends PHPUnit_Framework_TestCase
 {
     public function setUp()
     {
