@@ -6,6 +6,6 @@ PINF is developed using [http://www.eclipse.org/ eclipse] as the IDE, but you do
 
   # Download *Eclipse PDT All-in-one* from: http://www.zend.com/en/community/pdt
   # Install Plugins (Menu: _Help_ -> _Install New Software..._, _Work with:_ -> _Add_):
-    # *Web Tools Platform (WTP)*: http://download.eclipse.org/webtools/updates/
+    # *Web Tools Platform (WTP)*: http://download.eclipse.org/webtools/updates
     # *Data Tools Platform (DTP)*: http://download.eclipse.org/datatools/updates
     # *AWS Toolkit for Eclipse*: http://aws.amazon.com/eclipse
