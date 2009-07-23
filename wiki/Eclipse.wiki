@@ -14,5 +14,5 @@ PINF is developed using [http://www.eclipse.org/ eclipse] as the IDE, but you do
         * _Native JavaHL_ or _SVNKit_
         * You may need to install SVN Java bindings if using the _Native JavaHL_ connector.
           {{{
-          sudo port install subversion-javahlbindings
+sudo port install subversion-javahlbindings
           }}}
