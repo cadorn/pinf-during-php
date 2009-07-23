@@ -17,8 +17,6 @@ class str_to_argv_test extends PHPUnit_Framework_TestCase
         $argv = array('--exclude-group', 'EXTENDED-TEST');
         
         $this->assertEquals(str_to_argv($str), $argv);
-       
-      
       
     }
 
