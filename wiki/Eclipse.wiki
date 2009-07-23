@@ -2,7 +2,7 @@
 
 PINF is developed using [http://www.eclipse.org/ eclipse] as the IDE, but you do not need to use eclipse to work with PINF (any editor will do). PINF is also aimed for use in Virtualized environments, specifically [http://aws.amazon.com/ Amazon Web Services] which provide [http://aws.amazon.com/eclipse/ tools for eclipse] to speed up your development.
 
-= Typical Eclipse Setup =
+= Typical Eclipse Setup (PDT) =
 
   # Download *Eclipse PDT All-in-one* from: http://www.zend.com/en/community/pdt
   # Install Plugins (Menu: _Help_ -> _Install New Software..._, _Work with:_ -> _Add_):
