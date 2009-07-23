@@ -14,9 +14,5 @@ function str_to_argv($str)
 {
     $tokens = explode(' ', $str);
     
-    
-    
-    
-    
-  
+    return $tokens;
 }
