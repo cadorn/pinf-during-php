@@ -19,3 +19,4 @@ sudo port install subversion-javahlbindings
             }}}
       OR
       * *[http://subclipse.tigris.org/ Subclipse]*: http://subclipse.tigris.org/update_1.6.x
+  # Menu: _Eclipse_ -> _Preferences_, _General_ ->_Editors_ -> _Text Editors_, check _Insert spaces for tabs_
