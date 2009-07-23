@@ -9,3 +9,4 @@ PINF is developed using [http://www.eclipse.org/ eclipse] as the IDE, but you do
     # *Web Tools Platform (WTP)*: http://download.eclipse.org/webtools/updates (Also install _Project Provided Components_)
     # *Data Tools Platform (DTP)*: http://download.eclipse.org/datatools/updates
     # *AWS Toolkit for Eclipse*: http://aws.amazon.com/eclipse
+    # *Subversive*: http://download.eclipse.org/technology/subversive/0.7/update-site
