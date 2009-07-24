@@ -23,6 +23,36 @@ See: [PEAR], [Phing], [ZendFramework], [PHPUnit]
 pinf show version
 }}}
 
+Show version information for PINF components.
+
+== Environment Management ==
+
+{{{
+pinf show environment
+}}}
+
+Show information about the currently active environment.
+
+{{{
+pinf create environment <Name>
+}}}
+
+Initialize a new environment with _`<Name>`_.
+
+== Platform Management ==
+
+{{{
+pinf discover platform
+}}}
+
+Determine all matching platform drivers and store them in the currently active environment.
+
+{{{
+pinf show platform
+}}}
+
+Show information about the platform for the currently active environment.
+
 == Workspace Management ==
 
 {{{
