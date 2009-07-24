@@ -79,3 +79,5 @@ Show information about the current workspace determined by the current directory
 {{{
 pinf list packages
 }}}
+
+List all packages found based on the current directory.
