@@ -39,6 +39,13 @@ pinf create environment <Name>
 
 Initialize a new environment with _`<Name>`_.
 
+{{{
+pinf switch environment <Name>
+}}}
+
+Switch to the _`<Name>`_ environment.
+
+
 == Platform Management ==
 
 {{{
