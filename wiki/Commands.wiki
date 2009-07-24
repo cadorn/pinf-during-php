@@ -29,7 +29,7 @@ pinf show version
 pinf init workspace <Name>
 }}}
 
-Initialize a new workspace with _<Name>_ in the current directory (must be empty).
+Initialize a new workspace with _`<Name>`_ in the current directory (must be empty).
 
 {{{
 pinf show workspace
