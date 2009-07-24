@@ -17,7 +17,28 @@ See: [PEAR], [Phing], [ZendFramework], [PHPUnit]
 
 = PINF commands =
 
+== General ==
+
 {{{
 pinf show version
+}}}
+
+== Workspace Management ==
+
+{{{
+pinf init workspace <Name>
+}}}
+
+Initialize a new workspace with _<Name>_ in the current directory (must be empty).
+
+{{{
+pinf show workspace
+}}}
+
+Show information about the current workspace determined by the current directory.
+
+== Package Management ==
+
+{{{
 pinf list packages
 }}}
