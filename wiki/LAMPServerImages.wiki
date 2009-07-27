@@ -1,0 +1,35 @@
+#summary Ready to go LAMP Server Images
+
+Below you will find a list of LAMP server images that you can download and run with [http://www.vmware.com/ VMware], [http://aws.amazon.com/ec2/ Amazon EC2] and other platforms. The goal is to be able to easily install and run PINF on any of these servers.
+
+= Amazon EC2 =
+
+*Status: Not tested*
+
+  * Vendor: http://www.zend.com/
+  * AMI ID: ami-51e30238
+  * OS: Ubuntu 9 Server
+  * Information: http://developer.amazonwebservices.com/connect/entry.jspa?externalID=2663
+  * Tutorial: http://devzone.zend.com/article/4859-Get-Your-Cloud-on-with-Zend-Server-CE
+
+= ThoughtPolice =
+
+*Status: Not tested*
+
+  * Vendor: http://www.thoughtpolice.co.uk/
+  * Images: http://www.thoughtpolice.co.uk/vmware/
+  * OS:
+    * CentOS
+    * Debian
+    * Fedora Core
+    * FreeBSD
+    * Ubuntu Server
+  * NOTE: You will need to install a LAMP stack ([http://www.zend.com/en/products/server-ce/index ZendServer CE] for example).
+
+= Virtual Appliances (company) =
+
+*Status: Not tested*
+
+  * Vendor: http://virtualappliances.net/
+  * Appliance: http://virtualappliances.net/products/lamp.php
+  * OS: Ubuntu Server Edition 8.04
