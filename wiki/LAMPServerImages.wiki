@@ -12,7 +12,7 @@ Below you will find a list of LAMP server images that you can download and run w
   * Information: http://developer.amazonwebservices.com/connect/entry.jspa?externalID=2663
   * Tutorial: http://devzone.zend.com/article/4859-Get-Your-Cloud-on-with-Zend-Server-CE
 
-= ThoughtPolice =
+= !ThoughtPolice =
 
 *Status: Not tested*
 
@@ -24,7 +24,7 @@ Below you will find a list of LAMP server images that you can download and run w
     * Fedora Core
     * FreeBSD
     * Ubuntu Server
-  * NOTE: You will need to install a LAMP stack ([http://www.zend.com/en/products/server-ce/index ZendServer CE] for example).
+  * *NOTE:* You will need to install a LAMP stack ([http://www.zend.com/en/products/server-ce/index ZendServer CE] for example).
 
 = Virtual Appliances (company) =
 
