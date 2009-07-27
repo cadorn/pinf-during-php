@@ -1,0 +1,5 @@
+#summary You have PINF installed on your server. What next?
+
+The information below assumes you have PINF installed on your server.
+
+= The Basics =
