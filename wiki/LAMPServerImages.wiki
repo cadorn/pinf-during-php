@@ -25,6 +25,21 @@ Below you will find a list of LAMP server images that you can download and run w
     * VHD for Microsoft(R) Hyper-V (32 bit)
   * OS: rPath Linux
 
+= Cohesive Flexible Technologies =
+
+*Status: Not tested*
+
+  * Vendor: http://www.cohesiveft.com/
+  * Images: http://www.cohesiveft.com/ElasticServer/
+    * VMware
+    * Xen
+    * KVM
+    * Amazon EC2
+    * ElasticHosts
+  * OS:
+    * DaiSY Linux
+    * Ubuntu
+
 = !ThoughtPolice =
 
 *Status: Not tested*
