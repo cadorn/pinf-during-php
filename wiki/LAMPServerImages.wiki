@@ -12,12 +12,26 @@ Below you will find a list of LAMP server images that you can download and run w
   * Information: http://developer.amazonwebservices.com/connect/entry.jspa?externalID=2663
   * Tutorial: http://devzone.zend.com/article/4859-Get-Your-Cloud-on-with-Zend-Server-CE
 
+= rPath rBuilder = 
+
+*Status: Not tested*
+
+  * Vendor: http://www.rpath.com/ via http://www.rpath.org/
+  * Images: http://www.rpath.org/project/lamp/
+    * Mountable Filesystem (64 bit)
+    * Installable ISO (32 & 64 bit)
+    * VMware (32 & 64 bit, simple and ESX Server)
+    * Citrix XenServer (64 bit)
+    * VHD for Microsoft(R) Hyper-V (32 bit)
+  * OS: rPath Linux
+
 = !ThoughtPolice =
 
 *Status: Not tested*
 
   * Vendor: http://www.thoughtpolice.co.uk/
   * Images: http://www.thoughtpolice.co.uk/vmware/
+    * VMware
   * OS:
     * CentOS
     * Debian
@@ -31,5 +45,8 @@ Below you will find a list of LAMP server images that you can download and run w
 *Status: Not tested*
 
   * Vendor: http://virtualappliances.net/
-  * Appliance: http://virtualappliances.net/products/lamp.php
+  * Image: http://virtualappliances.net/products/lamp.php
+    * VMware
+    * Virtual Iron
+    * Microsoft Virtual PC, Virtual Server
   * OS: Ubuntu Server Edition 8.04
