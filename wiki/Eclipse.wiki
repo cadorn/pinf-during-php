@@ -26,3 +26,4 @@ sudo port install subversion-javahlbindings
 
   # Download: http://www.aptana.com/studio/download
   #  Menu: _Window_ -> _Preferences_, _Aptana_ ->_Editors_, _Tab Insertion_, check _Use spaces_ with width set to 4
+  #  Menu: _Window_ -> _Preferences_, _General_ ->_Editors_ -> _Text Editors_, check _Show line numbers_
