@@ -4,6 +4,8 @@
 
 The _pinf_ command line tool provides a single point of access to your entire PHP toolchain. All commands are exposed via the Zend Tool Framework to any number of clients.
 
+*<font color="red">NOTE: The commands below are implemented to varying degrees. They are not ready for general use although you can begin to play with them.</font>*
+
 = Third party wrappers =
 
 {{{
